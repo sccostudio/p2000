@@ -1,0 +1,105 @@
+@font-face {
+  font-family: 'BD Equipment';
+  src: url('/fonts/BDEquipment.woff2') format('woff2'),
+       url('/fonts/BDEquipment.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'VTC Eva Duarte';
+  src: url('/fonts/VTCEva-Duarte.woff2') format('woff2'),
+       url('/fonts/VTCEva-Duarte.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  margin: 0;
+  background-color: #8a1e04;
+  font-family: "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+  font-weight: 500;
+  min-height: 100vh;
+  color: #c56725;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+a {
+  color: #c56725;
+}
+
+a:hover, a:focus {
+  color: #AC4E0C;
+  text-decoration: none;
+}
+
+/* === PAGE WRAPPER === */
+.book-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 20px 30px 10px;
+  box-sizing: border-box;
+}
+
+/* === TOP LOGO BANNER === */
+a.logo {
+  display: block;
+  width: 100%;
+  height: 4.5vw;
+  background: url('/img/book-logo.png');
+  background-size: contain;
+  background-repeat: space;
+  flex-shrink: 0;
+}
+
+/* === WIDGET AREA === */
+.widget-area {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* === BOTTOM PATTERN === */
+.pattern-bottom {
+  display: block;
+  width: 100%;
+  height: 2.05vw;
+  background: url('/img/pattern.png') repeat-x;
+  background-size: contain;
+  flex-shrink: 0;
+  margin-bottom: 1.5vw;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 991px) {
+  body {
+    height: 100vh;
+  }
+
+  a.logo {
+    height: 12vw;
+  }
+
+  .pattern-bottom {
+    height: 4vw;
+  }
+}
+
+@media (max-width: 599px) {
+  .book-wrapper {
+    padding: 15px 15px 10px;
+  }
+}

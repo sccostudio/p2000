@@ -1,0 +1,274 @@
+@font-face {
+  font-family: 'BD Equipment';
+  src: url('/fonts/BDEquipment.woff2') format('woff2'),
+       url('/fonts/BDEquipment.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'VTC Eva Duarte';
+  src: url('/fonts/VTCEva-Duarte.woff2') format('woff2'),
+       url('/fonts/VTCEva-Duarte.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #8a1e04;
+  font-family: "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+  font-weight: 500;
+  min-height: 100vh;
+  color: #c56725;
+  margin: 0;
+}
+
+a {
+  color: #c56725;
+  text-decoration: none;
+}
+
+a:hover, a:focus {
+  color: #AC4E0C;
+  text-decoration: none;
+}
+
+.container {
+  padding: 30px 30px 10px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.logo {
+  display: block;
+  margin-bottom: 1vw;
+}
+
+.logo img {
+  width: 100%;
+}
+
+nav ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav ul li a {
+  font-family: 'BD Equipment';
+  font-weight: 400;
+  font-size: 5vw;
+  line-height: 1;
+  display: block;
+  color: #c56725;
+  padding-top: 1vw;
+}
+
+nav ul li:nth-of-type(2n+1) a {
+  font-family: 'VTC Eva Duarte';
+  font-weight: 400;
+  font-size: 5.52vw;
+  line-height: 1.1;
+  padding-top: 0;
+}
+
+nav ul li a:hover, nav ul li a:focus {
+  color: #AC4E0C;
+  text-decoration: none;
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.col, .col-auto {
+  position: relative;
+  width: 100%;
+}
+
+.col {
+  flex-basis: 0;
+  flex-grow: 1;
+  max-width: 100%;
+}
+
+.col-auto {
+  flex: 0 0 auto;
+  width: auto;
+  max-width: 100%;
+}
+
+.main {
+  position: relative;
+  padding-top: 6vw;
+  padding-bottom: 2vw;
+}
+
+.main::before {
+  position: absolute;
+  content: '';
+  top: 1.5vw;
+  left: 0;
+  right: 0;
+  height: 2.13vw;
+  background: url(/img/pattern.png) repeat-x;
+  background-size: contain;
+}
+
+h1, .h1 {
+  font-family: 'VTC Eva Duarte';
+  font-weight: 400;
+  font-size: 4.167vw;
+  line-height: 1;
+  margin: 0;
+}
+
+h1 br {
+  display: none;
+}
+
+.list-social {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: right;
+  font-size: 1.5625vw;
+  line-height: 1.2;
+}
+
+.footer {
+  font-size: 2.968vw;
+  line-height: 1.1;
+}
+
+.footer > .row {
+  align-items: center;
+}
+
+address {
+  margin-bottom: 0;
+  font-style: normal;
+}
+
+.time {
+  font-family: 'BD Equipment';
+  font-weight: 400;
+  font-size: 6vw;
+  line-height: 1;
+  margin-bottom: -1.1vw;
+  text-align: right;
+}
+
+.d-none {
+  display: none;
+}
+
+.d-block {
+  display: block;
+}
+
+.w-full {
+  width: 100%;
+}
+
+@media (min-width: 992px) {
+  .d-md-none {
+    display: none;
+  }
+  .d-md-block {
+    display: block;
+  }
+  .d-md-flex {
+    display: flex;
+  }
+}
+
+@media (max-width: 991px) {
+  body {
+    height: 100vh;
+  }
+  .logo {
+    margin-bottom: 2vw;
+  }
+  nav ul {
+    padding: 10px 0;
+  }
+  nav ul li a {
+    font-size: 7.4vw;
+    padding-top: 1.7vw;
+  }
+  nav ul li:nth-of-type(2n+1) a {
+    font-size: 8.5vw;
+  }
+  .main {
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    flex-basis: 0;
+    max-height: 100%;
+    display: flex;
+    align-items: center;
+  }
+  .main::after {
+    position: absolute;
+    content: '';
+    bottom: 1.5vw;
+    left: 0;
+    right: 0;
+    height: 4vw;
+    background: url(/img/pattern.png) repeat-x;
+    background-size: contain;
+  }
+  .main::before {
+    height: 4vw;
+  }
+  .main > .row {
+    width: 100%;
+  }
+  h1, .h1 {
+    font-size: 6.2vw;
+  }
+  h1 br {
+    display: initial;
+  }
+  .footer {
+    text-align: center;
+    padding-top: 3vw;
+  }
+  .footer > .row > .col-auto {
+    flex-basis: 0;
+    flex-grow: 1;
+  }
+  address {
+    font-size: 4.4vw;
+    padding-top: 2vw;
+    padding-bottom: 1vw;
+  }
+  .email-mobile {
+    font-size: 4.4vw;
+  }
+  .social-mobile {
+    font-size: 9.7vw;
+  }
+}
+
+@media (max-width: 599px) {
+  .container {
+    padding: 15px 15px 10px;
+  }
+}
