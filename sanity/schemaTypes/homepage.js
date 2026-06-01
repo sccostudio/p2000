@@ -58,7 +58,7 @@ export default {
       options: {
         accept: '.pdf',
       },
-    },                  // 👈 This closing }, was missing!
+    },
     {
       name: 'desktopLogo',
       title: 'Desktop Logo',
